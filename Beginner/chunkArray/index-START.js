@@ -6,6 +6,22 @@
 
 function chunkArray(array, size) {
     // Code goes here
+    let newArray = []
+    for (i = 0; i < array.length; i += size){
+        array.splice(i,i + size)
+    }
+    return newArray
+}
+
+function chunkArray(array, size) {
+    let result = []
+
+    for (i = 0; i < array.length; i += size) {
+        let chunk = array.slice(i, i + size)
+        result.push(chunk)
+    }
+
+    return result
 }
 
 

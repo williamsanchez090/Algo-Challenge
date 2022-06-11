@@ -8,7 +8,16 @@ don't. E.g
 
 
 function isAnagram(stringA, stringB) {
-    // Code goes here
+    let eachWord1 = stringA.split('').sort().join('').toLowerCase()
+    let eachWord2 = stringB.split('').sort().join('').toLowerCase()
+    console.log(eachWord1)
+    console.log(eachWord2)
+
+    if(eachWord1 === eachWord2){
+        return true
+    }else{
+        return false
+    }
 }
 
 

@@ -5,15 +5,11 @@ the provided integer(n). E.g
 */
 
 
-function factorial(n, memo) {
-    memo = memo || {}
-    if(memo[n]){
-        return memo[n]
-    }  
+function factorial(n) {
     if (n === 0) {
         return 1
     }
-    return memo[n] = n * factorial(n - 1, memo)
+    return n * factorial(n-1)
 }
 
 module.exports = factorial

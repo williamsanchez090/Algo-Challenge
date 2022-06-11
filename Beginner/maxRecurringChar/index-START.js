@@ -6,8 +6,17 @@ e.g maxRecurringChar('aabacada') // will return 'a'
 
 
 function maxRecurringChar(text) {
-    // Code goes here
-}
+    let num = 0
+   let str = ''
+   text.split('').forEach( x => {
+       if( text.split(x).length > num){
+           num = text.split(x).length
+           str = x
+       }
+   })
+   return str
+}  
+
 
 
 
